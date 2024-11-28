@@ -1,0 +1,84 @@
+#recipe-image {
+  object-fit: inherit;
+  max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+  max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+}
+.custom-height {
+  height: 40rem; /* Default height for larger screens */
+}
+
+/* For medium screens (≥ 768px) */
+@media (max-width: 768px) {
+  .custom-height {
+    height: 20rem; /* Adjust height for medium screens */
+  }
+}
+
+/* For small screens (≥ 640px) */
+@media (max-width: 640px) {
+  .custom-height {
+    height: 10rem; /* Adjust height for small screens */
+  }
+}
+
+/* For extra small screens (≥ 480px) */
+@media (max-width: 480px) {
+  .custom-height {
+    height: 15rem; /* Adjust height for extra small screens */
+  }
+}
+
+/* Custom styles for the checkboxes */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #c2c7cf; /* Border color */
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease; /* Transition for background color */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #c2c7cf; /* Background color when checked */
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px; /* Adjust this to fit the checkmark inside the box */
+    top: 1px; /* Adjust this to fit the checkmark inside the box */
+    width: 6px;
+    height: 12px;
+    border: solid green; /* Checkmark color */
+    border-width: 0 2px 2px 0; /* Create the checkmark */
+    transform: rotate(45deg);
+}
+
+/* Optional: Change border color on hover */
+input[type="checkbox"]:hover {
+    border-color: #38a169; /* Change border color on hover */
+}
+
+
+/* search  */
+ /* Style for the input field */
+ .multi-color-placeholder {
+    border: 1px solid #ccc; /* Border style */
+    padding: 0.5rem 0.75rem; /* Padding */
+    width: 50%; /* Width */
+    color: transparent; /* Hide the input text color */
+    background-image: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899); /* Gradient background */
+    background-clip: text; /* Clip background to text */
+    -webkit-background-clip: text; /* For Safari */
+  }
+
+  /* Style for the placeholder */
+  .multi-color-placeholder::placeholder {
+    color: transparent; /* Hide the placeholder text */
+    background-image: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899); /* Same gradient */
+    background-clip: text; /* Clip background to text */
+    -webkit-background-clip: text; /* For Safari */
+  }
